@@ -16,37 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Navigation View";
     self.scrollView.delegate = self;
     
     for (UIImage *image in self.imageArray) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         CGRect frame = CGRectMake(self.view.frame.size.width * self.imageIndex, self.view.frame.origin.y, self.view.bounds.size.width, self.view.bounds.size.height);
-        [imageView setFrame:frame];
+        imageView.frame = frame;
+        [self.scrollView addSubview:imageView];
+        self.imageIndex++;
     }
-    
-    UIImageView *image1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse"]];
-    CGRect frame1 = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    image1.frame = frame1;
-    self.imageview = image1;
-    [self.scrollView addSubview:image1];
-    UIImageView *image2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-in-Field"]];
-    CGRect frame2 = CGRectMake(self.view.frame.size.width, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
-    image2.frame = frame2;
-    [self.scrollView addSubview:image2];
-    UIImageView *image3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lighthouse-night"]];
-    CGRect frame3 = CGRectMake(self.view.frame.size.width*2, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
-    image3.frame = frame3;
-    [self.scrollView addSubview:image3];
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width*3, self.view.frame.size.height);
-    self.scrollView.pagingEnabled = YES;
-    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeView:)];
-    [self.scrollView addGestureRecognizer:tgr];
-    CGRect frame4 = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50);
-    self.pageControl = [[UIPageControl alloc]initWithFrame:frame4];
-    [self.view addSubview:self.pageControl];
-    self.pageControl.currentPage = 0;
-    self.pageControl.numberOfPages = 3;
-    [self.scrollView setContentOffset:CGPointMake(0, 68)];
+    [self setUpScrollView];
+    [self setUpPageControl];
+    self.imageIndex = 0;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -63,9 +45,28 @@
     return self;
 }
 
+- (void) setUpScrollView {
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width*self.imageArray.count, self.view.frame.size.height);
+    self.scrollView.pagingEnabled = YES;
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeView:)];
+    [self.scrollView addGestureRecognizer:tgr];
+    [self.scrollView setContentOffset:CGPointMake(0, 64)];
+}
+
+- (void) setUpPageControl {
+    CGRect frame4 = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50);
+    self.pageControl = [[UIPageControl alloc]initWithFrame:frame4];
+    [self.view addSubview:self.pageControl];
+    self.pageControl.currentPage = 0;
+    self.pageControl.numberOfPages = 3;
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nextPage)];
+    [self.pageControl addGestureRecognizer:tgr];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int page = round(self.scrollView.contentOffset.x/self.view.frame.size.width);
     self.pageControl.currentPage = page;
+    self.imageIndex = page;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +75,19 @@
 }
 
 - (void) changeView: (UITapGestureRecognizer *) sender {
-    [self.navigationController pushViewController: [self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"] animated:YES];
+    OtherScrollViewController *sv = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
+    sv.image = self.imageArray[self.imageIndex];
+    [self.navigationController pushViewController:sv animated:NO];
+}
+
+- (void) nextPage {
+    if (self.imageIndex == self.imageArray.count -1) {
+        self.imageIndex = 0;
+    }
+    else {
+        self.imageIndex++;
+    }
+    [self.scrollView setContentOffset:CGPointMake(self.view.bounds.size.width*self.imageIndex, 0)];
 }
 
 @end

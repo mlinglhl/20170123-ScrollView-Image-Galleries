@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Other Scroll View Controller-->
+        <!--Detail View-->
         <scene sceneID="gYt-9P-u1a">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="5ZO-Oc-2xT" customClass="OtherScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" title="Detail View" id="5ZO-Oc-2xT" customClass="OtherScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gGV-0v-C0y"/>
                         <viewControllerLayoutGuide type="bottom" id="wFS-LV-OtT"/>
@@ -21,31 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4Z-xq-Jho">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4Z-xq-Jho">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-hX-o83">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-hX-o83">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="375" id="S2n-r6-94Q"/>
-                                            <constraint firstAttribute="height" constant="667" id="guC-3A-cfx"/>
-                                        </constraints>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PHe-hX-o83" secondAttribute="bottom" id="BEn-lm-Bn7"/>
-                                    <constraint firstItem="PHe-hX-o83" firstAttribute="leading" secondItem="U4Z-xq-Jho" secondAttribute="leading" id="EO6-rN-XyA"/>
-                                    <constraint firstAttribute="width" constant="375" id="Eum-VI-za0"/>
-                                    <constraint firstAttribute="trailing" secondItem="PHe-hX-o83" secondAttribute="trailing" id="V6p-Ak-cg8"/>
-                                    <constraint firstAttribute="height" constant="667" id="Wog-Fw-pgi"/>
-                                    <constraint firstItem="PHe-hX-o83" firstAttribute="top" secondItem="U4Z-xq-Jho" secondAttribute="top" id="dIR-ef-E77"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerY" secondItem="TZx-a8-GSh" secondAttribute="centerY" id="T8g-KV-tcu"/>
-                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerX" secondItem="TZx-a8-GSh" secondAttribute="centerX" id="Zu6-H2-ezU"/>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerY" secondItem="TZx-a8-GSh" secondAttribute="centerY" id="3vz-K0-6DO"/>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="width" secondItem="TZx-a8-GSh" secondAttribute="width" id="AlH-hZ-LZ9"/>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerX" secondItem="TZx-a8-GSh" secondAttribute="centerX" id="NuF-Yj-qUE"/>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="height" secondItem="TZx-a8-GSh" secondAttribute="height" id="OV4-vR-b2f"/>
                         </constraints>
                     </view>
                     <connections>
@@ -71,7 +62,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN0-dz-ff9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
