@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5ZO-Oc-2xT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Other Scroll View Controller-->
+        <scene sceneID="gYt-9P-u1a">
+            <objects>
+                <viewController id="5ZO-Oc-2xT" customClass="OtherScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gGV-0v-C0y"/>
+                        <viewControllerLayoutGuide type="bottom" id="wFS-LV-OtT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TZx-a8-GSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4Z-xq-Jho">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-hX-o83">
+                                        <rect key="frame" x="0.0" y="0.0" width="900" height="1800"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Eum-VI-za0"/>
+                                    <constraint firstItem="PHe-hX-o83" firstAttribute="leading" secondItem="U4Z-xq-Jho" secondAttribute="leading" id="Hws-JL-qHH"/>
+                                    <constraint firstAttribute="bottom" secondItem="PHe-hX-o83" secondAttribute="bottom" id="SpO-rb-Gbs"/>
+                                    <constraint firstAttribute="trailing" secondItem="PHe-hX-o83" secondAttribute="trailing" id="WS7-F7-Tcg"/>
+                                    <constraint firstAttribute="height" constant="667" id="Wog-Fw-pgi"/>
+                                    <constraint firstItem="PHe-hX-o83" firstAttribute="top" secondItem="U4Z-xq-Jho" secondAttribute="top" id="dhi-TZ-3em"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerY" secondItem="TZx-a8-GSh" secondAttribute="centerY" id="T8g-KV-tcu"/>
+                            <constraint firstItem="U4Z-xq-Jho" firstAttribute="centerX" secondItem="TZx-a8-GSh" secondAttribute="centerX" id="Zu6-H2-ezU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="PHe-hX-o83" id="5tS-uF-thk"/>
+                        <outlet property="scrollView" destination="U4Z-xq-Jho" id="fC0-Vy-W2x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWE-4l-LGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="-577.06146926536735"/>
+        </scene>
         <!--Scroll View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

@@ -13,6 +13,7 @@
 		89E496391E3660D4006BF18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E496381E3660D4006BF18C /* Assets.xcassets */; };
 		89E4963C1E3660D4006BF18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E4963A1E3660D4006BF18C /* LaunchScreen.storyboard */; };
 		89E496451E36651E006BF18C /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E496441E36651E006BF18C /* ScrollViewController.m */; };
+		89E496481E3670E3006BF18C /* OtherScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E496471E3670E3006BF18C /* OtherScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		89E4963D1E3660D4006BF18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89E496431E36651E006BF18C /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		89E496441E36651E006BF18C /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		89E496461E3670E3006BF18C /* OtherScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherScrollViewController.h; sourceTree = "<group>"; };
+		89E496471E3670E3006BF18C /* OtherScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				89E496301E3660D4006BF18C /* AppDelegate.m */,
 				89E496431E36651E006BF18C /* ScrollViewController.h */,
 				89E496441E36651E006BF18C /* ScrollViewController.m */,
+				89E496461E3670E3006BF18C /* OtherScrollViewController.h */,
+				89E496471E3670E3006BF18C /* OtherScrollViewController.m */,
 				89E496351E3660D4006BF18C /* Main.storyboard */,
 				89E496381E3660D4006BF18C /* Assets.xcassets */,
 				89E4963A1E3660D4006BF18C /* LaunchScreen.storyboard */,
@@ -152,6 +157,7 @@
 			files = (
 				89E496451E36651E006BF18C /* ScrollViewController.m in Sources */,
 				89E496311E3660D4006BF18C /* AppDelegate.m in Sources */,
+				89E496481E3670E3006BF18C /* OtherScrollViewController.m in Sources */,
 				89E4962E1E3660D4006BF18C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
