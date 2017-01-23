@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		89E4962E1E3660D4006BF18C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E4962D1E3660D4006BF18C /* main.m */; };
 		89E496311E3660D4006BF18C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E496301E3660D4006BF18C /* AppDelegate.m */; };
-		89E496341E3660D4006BF18C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E496331E3660D4006BF18C /* ViewController.m */; };
 		89E496371E3660D4006BF18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E496351E3660D4006BF18C /* Main.storyboard */; };
 		89E496391E3660D4006BF18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E496381E3660D4006BF18C /* Assets.xcassets */; };
 		89E4963C1E3660D4006BF18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E4963A1E3660D4006BF18C /* LaunchScreen.storyboard */; };
+		89E496451E36651E006BF18C /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89E496441E36651E006BF18C /* ScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		89E4962D1E3660D4006BF18C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89E4962F1E3660D4006BF18C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89E496301E3660D4006BF18C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89E496321E3660D4006BF18C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		89E496331E3660D4006BF18C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		89E496361E3660D4006BF18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89E496381E3660D4006BF18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89E4963B1E3660D4006BF18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89E4963D1E3660D4006BF18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E496431E36651E006BF18C /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		89E496441E36651E006BF18C /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				89E4962F1E3660D4006BF18C /* AppDelegate.h */,
 				89E496301E3660D4006BF18C /* AppDelegate.m */,
-				89E496321E3660D4006BF18C /* ViewController.h */,
-				89E496331E3660D4006BF18C /* ViewController.m */,
+				89E496431E36651E006BF18C /* ScrollViewController.h */,
+				89E496441E36651E006BF18C /* ScrollViewController.m */,
 				89E496351E3660D4006BF18C /* Main.storyboard */,
 				89E496381E3660D4006BF18C /* Assets.xcassets */,
 				89E4963A1E3660D4006BF18C /* LaunchScreen.storyboard */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E496341E3660D4006BF18C /* ViewController.m in Sources */,
+				89E496451E36651E006BF18C /* ScrollViewController.m in Sources */,
 				89E496311E3660D4006BF18C /* AppDelegate.m in Sources */,
 				89E4962E1E3660D4006BF18C /* main.m in Sources */,
 			);
@@ -307,6 +307,7 @@
 				89E496421E3660D4006BF18C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
