@@ -9,8 +9,6 @@
 #import "OtherScrollViewController.h"
 
 @interface OtherScrollViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -20,8 +18,10 @@
     [super viewDidLoad];
     self.scrollView.delegate = self;
     [self.imageView setImage:[UIImage imageNamed:@"Lighthouse"]];
-    self.scrollView.maximumZoomScale = 1;
+    self.scrollView.maximumZoomScale = 3;
     self.scrollView.minimumZoomScale = 0.1;
+    UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeView:)];
+    [self.scrollView addGestureRecognizer:tgr];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,18 +29,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.imageView;
 }
 
+- (void) changeView: (UITapGestureRecognizer *) sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

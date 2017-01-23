@@ -10,6 +10,9 @@
 
 @interface ScrollViewController : UIViewController <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-
+@property UIPageControl *pageControl;
+@property UIImageView *imageview;
+@property NSArray <UIImageView *> *imageArray;
+@property NSInteger imageIndex;
 
 @end
